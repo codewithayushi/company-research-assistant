@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-def call_openrouter(prompt: str, model: str = "openai/gpt-3.5-turbo"):
+def call_openrouter(prompt: str, model: str = "meta-llama/llama-3-8b-instruct:free"):
     url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {
         "Authorization": f"Bearer {OPENROUTER_API_KEY}",
